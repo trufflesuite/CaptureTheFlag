@@ -1,0 +1,37 @@
+{
+  "name": "capture-the-flag",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Capture the flag!  A race to exploit the contract.",
+  "directories": {
+    "test": "test"
+  },
+  "config": {
+    "infura_project_id": "f6194ba837b640bba3db3d29cc658b07"
+  },
+  "scripts": {
+    "local_migrate": "truffle migrate --network local --reset",
+    "forked_migrate": "truffle migrate --network forked --reset",
+    "local_testnet": "ganache-cli --mnemonic 'sweet treat' --noVMErrorsOnRPCResponse",
+    "forked_testnet": "ganache-cli --fork https://mainnet.infura.io/v3/$npm_package_config_infura_project_id --networkId 1 --mnemonic 'sweet treat' --noVMErrorsOnRPCResponse",
+    "local_test": "truffle test --network local",
+    "forked_test": "truffle test --network forked"
+  },
+  "contributors": [
+    "Nick Paterno (https://github.com/nicholasjpaterno)",
+    "David Murdoch (https://twitter.com/atdavidmurdoch)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trufflesuite/CaptureTheFlag_DevCon5"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "truffle-hdwallet-provider": "^1.0.17",
+    "web3": "^1.2.1"
+  },
+  "devDependencies": {
+    "ganache-cli": "^6.7.0-beta.0",
+    "truffle": "^5.0.34"
+  }
+}
